@@ -1,0 +1,84 @@
+#score{
+    text-align: center;
+}
+
+#game{
+    width:900px;
+    height:600px;
+    border:2px solid black;
+    margin:auto;
+    overflow: hidden;
+    /* background-image: url("https://i.pinimg.com/originals/96/42/1a/96421a97b83034f52c410befe7cefa20.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: mymove 10s infinite;
+}
+
+@keyframes mymove {
+    /* 60% {background-position: center;}  */
+    0%   { background: url("https://previews.123rf.com/images/ganpanjaneedesign/ganpanjaneedesign1807/ganpanjaneedesign180700016/110884613-green-grass-background-nature-texture.jpg"); }
+    50% {     background: url("https://i.pinimg.com/originals/96/42/1a/96421a97b83034f52c410befe7cefa20.jpg");   }
+    100%  { background: url("https://envato-shoebox-0.imgix.net/2b49/818d-6bdf-432d-9be1-7868d406f276/Green+grass+background.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1400&s=a3bae5912eac5b0a4e6d5205c700f411"); }
+  }
+
+
+#panda{
+    background: url("https://s3.ap-south-1.amazonaws.com/running-panda/runner-panda.png");
+	width:177px; 
+	height:149px;
+	float: left;
+    top:400px;
+    position: relative;    
+}
+
+#obstacle{
+    height:90px;
+    width:90px;
+    top:480px;
+    /* float:right; // cannot use this float  */
+    left:950px;
+    position:relative;
+    background:url("https://image.shutterstock.com/image-vector/vector-wooden-logs-stack-three-260nw-1706724964.jpg");
+    background-size: cover;
+    animation:obstacle 2s infinite;
+}
+
+
+@keyframes obstacle{
+	0%{
+        /* right:0px; cannot use right property as it have to move left  */
+        left:950px;
+	}
+	100%{
+        left:-400px;
+    }
+}
+
+.walk-panda{
+    animation:walk 0.5s steps(9) infinite;
+}
+
+@keyframes walk{
+	0%{
+		background-position: 0px;
+	}
+	100%{
+		background-position: 1600px;
+	}
+}
+
+.jump-panda{
+    animation:jump 0.5s;
+}
+
+@keyframes jump{
+    0%{
+        top:480px;
+    }
+    50%{
+        top:120px;
+    }
+    100%{
+        top:380px;
+    }
+}
